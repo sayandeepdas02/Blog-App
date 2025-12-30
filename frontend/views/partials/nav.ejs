@@ -1,0 +1,57 @@
+<nav class="navbar navbar-expand-lg sticky-top">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <img src="/images/logo.png" alt="Blogify Logo" width="30" height="30" class="d-inline-block align-top me-2">
+      Blogify
+    </a>
+    <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarText">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <!-- Spacer to push next items to right-center if needed, or keep empty -->
+      </ul>
+
+      <!-- Central/Right Navigation -->
+      <ul class="navbar-nav mb-2 mb-lg-0 align-items-center">
+        <li class="nav-item">
+          <a class="nav-link" href="/#features">Features</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/#testimonials">Testimonials</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link me-3" href="/#blogs">Blogs</a>
+        </li>
+
+        <% if (locals.user) { %>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <%= user.fullName %>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end border-0 shadow-sm">
+              <li><a class="dropdown-item" href="/blog/add-new">Write a Story</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="/user/logout">Sign out</a></li>
+            </ul>
+          </li>
+          <% } else { %>
+            <li class="nav-item">
+              <a class="btn-nav-primary" href="/user/signin">Sign In</a>
+            </li>
+            <% } %>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<% if (locals.error) { %>
+  <div class="container mt-4">
+    <div class="alert alert-danger" role="alert">
+      <%= locals.error %>
+    </div>
+  </div>
+  <% } %>

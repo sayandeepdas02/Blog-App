@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <%- include("./partials/head") %>
+        <title>Blogify | Write, Publish, Grow</title>
+</head>
+
+<body>
+
+    <%- include("./partials/nav") %>
+
+        <!-- Hero Section -->
+        <header class="hero-section">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 mb-5 mb-lg-0">
+                        <h1 class="hero-title">Write. Publish.<br>Grow your audience.</h1>
+                        <p class="hero-subtitle">A modern blogging platform built for creators who value simplicity and
+                            performance. Join the Blogify community today.</p>
+                        <div class="d-flex gap-3">
+                            <a href="/blog/add-new" class="btn btn-primary-hero">
+                                Start Writing
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                                </svg>
+                            </a>
+                            <a href="#blogs" class="btn btn-outline-hero">Explore Blogs</a>
+                        </div>
+                    </div>
+                    <!-- Abstract UI Illustration matching the image -->
+                    <div class="col-lg-6">
+                        <div class="ui-card">
+                            <div class="ui-header">
+                                <div class="ui-dot"></div>
+                                <div class="ui-dot"></div>
+                                <div class="ui-dot"></div>
+                            </div>
+                            <div class="ui-skeleton-bar"
+                                style="height: 20px; width: 40px; background-color: #16a34a; margin-bottom: 2rem;">
+                            </div> <!-- Green Icon/Logo mock -->
+                            <div class="ui-skeleton-bar medium"></div>
+                            <div class="ui-skeleton-bar"></div>
+                            <div class="ui-skeleton-bar medium"></div>
+                            <div class="ui-skeleton-bar short"></div>
+                            <div class="ui-skeleton-button"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Features Section -->
+        <section id="features" class="py-5">
+            <div class="container py-5">
+                <div class="text-center mb-5">
+                    <h2 style="font-size: 2.25rem; font-weight: 700; margin-bottom: 1rem;">Everything you need to
+                        succeed</h2>
+                    <p class="text-muted" style="max-width: 600px; margin: 0 auto;">Powerful features designed to help
+                        you create, publish, and grow your content.</p>
+                </div>
+
+                <div class="row g-4">
+                    <!-- Feature 1 -->
+                    <div class="col-md-6">
+                        <div class="feature-card">
+                            <div class="feature-icon-box">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path>
+                                </svg>
+                            </div>
+                            <h3 class="feature-title">Lightning-fast publishing</h3>
+                            <p class="feature-text">Publish your content instantly with our optimized infrastructure. No
+                                waiting, no delays.</p>
+                        </div>
+                    </div>
+                    <!-- Feature 2 -->
+                    <div class="col-md-6">
+                        <div class="feature-card">
+                            <div class="feature-icon-box">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <path d="M12 20h9" />
+                                    <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z" />
+                                </svg>
+                            </div>
+                            <h3 class="feature-title">Clean editor experience</h3>
+                            <p class="feature-text">Focus on your writing with our distraction-free editor. Markdown
+                                support included.</p>
+                        </div>
+                    </div>
+                    <!-- Feature 3 -->
+                    <div class="col-md-6">
+                        <div class="feature-card">
+                            <div class="feature-icon-box">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <circle cx="11" cy="11" r="8" />
+                                    <path d="m21 21-4.3-4.3" />
+                                </svg>
+                            </div>
+                            <h3 class="feature-title">SEO-optimized content</h3>
+                            <p class="feature-text">Built-in SEO tools help your content rank higher and reach more
+                                readers.</p>
+                        </div>
+                    </div>
+                    <!-- Feature 4 -->
+                    <div class="col-md-6">
+                        <div class="feature-card">
+                            <div class="feature-icon-box">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <line x1="18" y1="20" x2="18" y2="10" />
+                                    <line x1="12" y1="20" x2="12" y2="4" />
+                                    <line x1="6" y1="20" x2="6" y2="14" />
+                                </svg>
+                            </div>
+                            <h3 class="feature-title">Analytics & insights</h3>
+                            <p class="feature-text">Track your performance with detailed analytics. Understand your
+                                audience better.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Blogs Section (Existing Dynamic Content) -->
+        <section id="blogs" class="py-5" style="background-color: #fafafa;">
+            <div class="container py-4">
+                <h2 class="text-center mb-5" style="font-weight: 800;">Latest Stories</h2>
+
+                <% if (blogs.length===0) { %>
+                    <div class="text-center py-5">
+                        <p class="text-muted">No stories published yet.</p>
+                    </div>
+                    <% } %>
+
+                        <div class="row row-cols-1 row-cols-md-3 g-4">
+                            <% blogs.forEach(blog=> { %>
+                                <div class="col">
+                                    <div class="card h-100 border-0 shadow-sm"
+                                        style="border-radius: 12px; overflow: hidden;">
+                                        <img src="<%= blog.coverImageURL %>" class="card-img-top" alt="Cover Image"
+                                            style="height: 200px; object-fit: cover;">
+                                        <div class="card-body">
+                                            <h5 class="fw-bold">
+                                                <%= blog.title %>
+                                            </h5>
+                                            <p class="text-muted small text-truncate">
+                                                <%= blog.body %>
+                                            </p>
+                                            <a href="/blog/<%= blog._id %>"
+                                                style="color: #16a34a; text-decoration: none; font-weight: 600; font-size: 0.9rem;">Read
+                                                More &rarr;</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <% }) %>
+                        </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section id="testimonials" class="py-5 mb-5">
+            <div class="container py-5">
+                <div class="text-center mb-5">
+                    <h2 style="font-size: 2.25rem; font-weight: 700;">Loved by writers and creators</h2>
+                    <p class="text-muted">Join thousands of creators who trust Blogify</p>
+                </div>
+
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="testimonial-card">
+                            <div class="quote-icon">❝</div>
+                            <p class="testimonial-text">"Blogify transformed how I publish content. The clean interface
+                                lets me focus on writing, and the analytics help me understand what resonates."</p>
+                            <div class="user-info">
+                                <div class="name">Sarah Chen</div>
+                                <div class="role">Tech Blogger</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="testimonial-card">
+                            <div class="quote-icon">❝</div>
+                            <p class="testimonial-text">"I've tried countless blogging platforms, but Blogify stands
+                                out. It's fast, intuitive, and the SEO features have doubled my organic traffic."</p>
+                            <div class="user-info">
+                                <div class="name">Marcus Rivera</div>
+                                <div class="role">Indie Writer</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="testimonial-card">
+                            <div class="quote-icon">❝</div>
+                            <p class="testimonial-text">"As a developer who blogs about code, I appreciate the markdown
+                                support and clean editor. No distractions, just pure writing."</p>
+                            <div class="user-info">
+                                <div class="name">Aisha Patel</div>
+                                <div class="role">Developer & Content Creator</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer-dark">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <div class="footer-brand">
+                            <img src="/images/logo.png" alt="Blogify Logo" width="24" height="24" class="me-2">
+                            Blogify
+                        </div>
+                        <p style="color: #9ca3af; font-size: 0.9rem; margin-top: 0.5rem; max-width: 300px;">Empowering
+                            creators to share their stories with the world.</p>
+                    </div>
+                    <div class="col-md-6 text-md-end">
+                        <a href="#" class="footer-link">Privacy</a>
+                        <a href="#" class="footer-link">Terms</a>
+                        <a href="#" class="footer-link">Contact</a>
+                    </div>
+                </div>
+                <div class="footer-copyright text-center text-md-start">
+                    &copy; <%= new Date().getFullYear() %> Blogify. All rights reserved.
+                </div>
+            </div>
+        </footer>
+        <%- include("./partials/scripts") %>
+</body>
+
+</html>
