@@ -9,7 +9,7 @@ const router = Router();
 
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
-        const uploadPath = path.join(__dirname, `../../frontend/public/uploads/${req.user._id}`);
+        const uploadPath = path.join(__dirname, `../../frontend-next/public/uploads/${req.user._id}`);
         console.log("Upload Path:", uploadPath);
         if (!fs.existsSync(uploadPath)) {
             fs.mkdirSync(uploadPath, { recursive: true });
@@ -24,21 +24,12 @@ const storage = multer.diskStorage({
 
 const upload = multer({ storage: storage });
 
-router.get("/add-new", (req, res) => {
-    return res.render("addBlog", {
-        user: req.user,
-    });
-});
-
 router.get("/:id", async (req, res) => {
+    // This route might still be used by frontend for checking? No, frontend connects to DB.
+    // We can keep it returning JSON just in case.
     const blog = await Blog.findById(req.params.id).populate("createdBy");
     const comments = await Comment.find({ blogId: req.params.id }).populate("createdBy");
-    console.log("comments", comments);
-    return res.render("blog", {
-        user: req.user,
-        blog,
-        comments
-    });
+    return res.json({ blog, comments, user: req.user });
 });
 
 router.post("/comment/:blogId", async (req, res) => {

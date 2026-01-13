@@ -16,20 +16,18 @@ mongoose
   .then(() => console.log("MongoDB Connected"))
 
 
-app.set("view engine", "ejs");
-app.set("views", path.join(__dirname, "../frontend/views"));
+app.use(express.static(path.join(__dirname, "../frontend-next/public")));
 
-app.use(express.urlencoded({ extended: false }));
-app.use(cookieParser());
-app.use(checkForAuthenticationCookie("token"));
-
-app.use(express.static(path.join(__dirname, "../frontend/public")));
-app.get("/", async (req, res) => {
-  const allBlogs = await Blog.find({});
-  res.render("home", {
-    user: req.user,
-    blogs: allBlogs,
-  });
+// app.get("/", async (req, res) => {
+const allBlogs = await Blog.find({});
+// API mode: return JSON or redirect to frontend (which is likely on port 3000)
+// Since this is the backend API, we can just return a message or JSON.
+// But to keep it simple and maybe strictly API:
+res.json({
+  message: "Welcome to Blogify API",
+  user: req.user,
+  blogs: allBlogs,
+});
 });
 
 app.use("/user", userRoute);

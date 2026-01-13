@@ -1,39 +1,47 @@
 # Blogify — Modern Full-Stack Blog Platform
 
-**Blogify** is a clean, production-ready blog application built using **Node.js, Express, MongoDB, EJS, and Tailwind CSS**.  
-It is designed with a focus on simplicity, performance, and a professional SaaS-style user experience.
+**Blogify** is a professional blog application built with **Next.js 16 (App Router)** and **Node.js/Express**.
 
-This project showcases end-to-end full-stack development — from backend architecture and database modeling to frontend UI, authentication, and deployment readiness.
-
----
+It features a polished, SaaS-style frontend that communicates with a robust backend for authentication and data management.
 
 ## ✨ Key Features
-
-- JWT-based user authentication
-- Create and read blog posts
-- Clean, modern SaaS-style landing page
-- Responsive UI built with Tailwind CSS
-- Server-side rendering using EJS
-- Secure environment variable handling
-- MongoDB integration with Mongoose
-
----
+-   **Next.js Frontend**: High-performance, Server-Side Rendered (SSR) UI.
+-   **Tailwind CSS**: Beautiful, responsive, and editorial design.
+-   **Authentication**: Secure JWT-based auth (proxied to backend).
+-   **File Uploads**: Image hosting with Multer.
+-   **No-API Reads**: Next.js reads directly from MongoDB for instant page loads.
 
 ## 🧱 Tech Stack
+-   **Frontend**: Next.js 16, TypeScript, Tailwind CSS, Lucide Icons.
+-   **Backend**: Node.js, Express, MongoDB (Mongoose), JWT.
+-   **Database**: MongoDB.
 
-**Backend**
-- Node.js
-- Express.js
+## 🚀 Getting Started
 
-**Database**
-- MongoDB
-- Mongoose
+### Prerequisites
+-   Node.js installed.
+-   MongoDB instance running.
 
-**Frontend**
-- EJS (Server-Side Rendering)
-- Tailwind CSS
+### 1. Setup Backend
+The backend handles authentication and file uploads.
+```bash
+cd backend
+npm install
+npm start
+```
+*Server runs on port 8000.*
 
-**Authentication & Tooling**
-- JSON Web Tokens (JWT)
-- Nodemon
-- dotenv
+### 2. Setup Frontend
+The frontend is the main user interface.
+```bash
+cd frontend-next
+npm install
+npm run dev
+```
+*App runs on port 3000.*
+
+Open [http://localhost:3000](http://localhost:3000) to view the app.
+
+## 📂 Project Structure
+-   `backend/`: Express server (Auth, Writes, Uploads).
+-   `frontend-next/`: Next.js application (UI, Reads).
